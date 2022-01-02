@@ -24,7 +24,7 @@ class TextSection extends StatelessWidget {
 
             Container(
               padding: const EdgeInsets.fromLTRB(_hPad, 10.0, _hPad, _hPad),
-              child: Text(_title),
+              child: Text(_body),
             ),
 
           ],
