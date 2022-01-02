@@ -8,7 +8,9 @@ class LocationDetail extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Hello"),
       ),
-      body: const Text("Structure of the application"),
+      body: const Center(
+        child: Text("Structure of the application"),
+      ),
     );
   }
 
