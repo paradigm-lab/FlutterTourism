@@ -2,21 +2,24 @@ import 'package:flutter/material.dart';
 
 class TextSection extends StatelessWidget {
 
-  final Color _color;
+  final String _title;
+  final String _body;
 
-  TextSection(this._color);
+  TextSection(this._title, this._body);
 
   @override
   Widget build(BuildContext context) {
+
     return (
-     Container(
-       child: const Text("Hello World"),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
 
-       decoration: BoxDecoration(
-         color: _color,
-       ),
-
-     )
+          children: [
+            Text(_title),
+            Text(_body),
+          ],
+        )
     );
   }
 
