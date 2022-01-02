@@ -5,11 +5,12 @@ class TextSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return (
      Container(
+       child: const Text("Hello World"),
+
        decoration: const BoxDecoration(
          color: Colors.red,
        ),
 
-       child: const Text("Hello World"),
      )
     );
   }
