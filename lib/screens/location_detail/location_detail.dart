@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/screens/location_detail/text_section.dart';
+import './text_section.dart';
 
 class LocationDetail extends StatelessWidget {
 
