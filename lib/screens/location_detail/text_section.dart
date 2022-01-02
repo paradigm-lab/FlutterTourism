@@ -4,6 +4,7 @@ class TextSection extends StatelessWidget {
 
   final String _title;
   final String _body;
+  static const double _hPad = 16.0;
 
   TextSection(this._title, this._body);
 
@@ -16,8 +17,16 @@ class TextSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
 
           children: [
-            Text(_title),
-            Text(_body),
+            Container(
+                padding: const EdgeInsets.fromLTRB(_hPad, 32.0, _hPad, 4.0),
+                child: Text(_title),
+            ),
+
+            Container(
+              padding: const EdgeInsets.fromLTRB(_hPad, 10.0, _hPad, _hPad),
+              child: Text(_title),
+            ),
+
           ],
         )
     );
