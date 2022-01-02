@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/screens/location_detail/text_section.dart';
 
 class LocationDetail extends StatelessWidget {
 
@@ -12,28 +13,9 @@ class LocationDetail extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-
-          Container(
-            decoration: const BoxDecoration(
-              color: Colors.red,
-            ),
-            child: const Text("Hello World"),
-          ),
-
-          Container(
-            decoration: const BoxDecoration(
-              color: Colors.green,
-            ),
-            child: const Text("Hello World"),
-          ),
-
-          Container(
-            decoration: const BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: const Text("Hello World"),
-          ),
-
+            TextSection(),
+            TextSection(),
+            TextSection(),
         ],
       ),
     );
