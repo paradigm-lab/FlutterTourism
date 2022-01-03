@@ -12,13 +12,13 @@ class LocationDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final locations = Location.fetchAll();
-    final location = locations.first;
+    final location = Location.fetchByID(_locationID);
+
 
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(location.name),
+          title: Text(location!.name),
           backgroundColor: Colors.red,
         ),
 
