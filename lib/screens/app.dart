@@ -8,6 +8,11 @@ class App extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
       return MaterialApp(
+        home: Locations(),
+        routes: {
+          '/': (context) => FirstScreen(),
+          '/second': (context) => SecondScreen(),
+        },
         theme: ThemeData(
           appBarTheme: const AppBarTheme(
             textTheme: TextTheme(
@@ -19,7 +24,6 @@ class App extends StatelessWidget{
             bodyText1: Body1TextStyle,
           )
         ),
-        home: Locations(),
       );
   }
 
