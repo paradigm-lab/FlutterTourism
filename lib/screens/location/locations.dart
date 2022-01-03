@@ -14,8 +14,16 @@ class Locations extends StatelessWidget {
         ),
         body: ListView(
           children:
-            locations.map((location) => Text(location.name)).toList(),
+            locations.map((location) => GestureDetector(
+                child: Text(location.name),
+                onTap: () => _onLocationTap(context, location.id),
+            )).toList(),
         ),
       );
   }
+
+  void _onLocationTap(BuildContext context, int locationID) {
+
+  }
+
 }
