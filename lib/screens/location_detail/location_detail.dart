@@ -24,12 +24,14 @@ class LocationDetail extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
             ImageBanner(location.imagePath),
-            TextSection("Arusha", "Arusha City is a Tanzanian city and the regional capital of the Arusha Region, with a population of 416,442 plus 323,198."),
-            TextSection("Dar-es-salaam", "Dar es Salaam is Tanzania's most prominent city for arts, fashion, media, film, television, and finance."),
-            TextSection("Zanzibar", "Zanzibar's marine ecosystem is an important part of the economy for fishing and algaculture and contains important marine."),
-        ],
+
+        ]..addAll(textSections(location)),
       ),
     );
+  }
+
+  List<Widget> textSections(Location location) {
+    return location.facts.map((fact) => TextSection(fact.title, fact.text)).toList();
   }
 
 }
