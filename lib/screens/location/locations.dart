@@ -23,7 +23,7 @@ class Locations extends StatelessWidget {
   }
 
   void _onLocationTap(BuildContext context, int locationID) {
-
+      Navigator.pushNamed(context, '/second');
   }
 
 }
