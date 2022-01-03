@@ -8,6 +8,8 @@ class Location {
 
   Location(this.id, this.name, this.imagePath, this.facts);
 
+
+
   static List<Location> fetchAll() {
     return [
       Location(1, 'Kiyomizu-dera', 'assets/images/zanzibar.jpeg', [
@@ -31,6 +33,18 @@ class Location {
         LocationFact('Architectural Style', 'Dar-es-salaam Buddhist architecture.')
       ]),
     ];
+  }
+
+  static Location? fetchByID(int locationID) {
+    // fetch all locations, iterate them and when we find the location
+    // With the ID we want, return it immediately
+    List<Location> locations = Location.fetchAll();
+    for (var i = 0; i < locations.length; i++) {
+      if (locations[i].id == locationID) {
+        return locations[i];
+      }
+    }
+    return null;
   }
 
 }
